@@ -1,5 +1,5 @@
 locals {
-  bucket_name = "website-s3-${terraform.workspace}"
+  bucket_name = "website-${terraform.workspace}"
 }
 
 module "s3_bucket" {
