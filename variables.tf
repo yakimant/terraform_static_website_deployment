@@ -18,3 +18,8 @@ variable "ssh_public_key" {
 variable "ssh_private_key" {
   type = string
 }
+
+variable "custom_domain" {
+  type = string
+  default = "example.com"
+}

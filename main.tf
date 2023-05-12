@@ -39,6 +39,7 @@ module "ec2_website_deploy" {
 
 module "s3_website" {
   source = "./modules/terraform-aws-s3_website"
+  custom_domain = var.custom_domain
 }
 
 module "s3_website_deploy" {
