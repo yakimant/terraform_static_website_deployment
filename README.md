@@ -43,6 +43,6 @@ The specifics of this solution is, that it deploys the website files in Terrafor
 - Variable descriptions & checks
 - Resources names and tags normalize
 - Remove files on EC2, when removed locally
-- CI (GitHub Actions or Terraform Cloud)
+- ~~CI (GitHub Actions or Terraform Cloud)~~ Done in Terraform Cloud (for prod environemnt), [see for example](https://github.com/yakimant/terraform_static_website_deployment/commits/main)
 - Custom DNS CNAME for CloudFront
 - Separate, non-default VPCs for Dev and Prod EC2
