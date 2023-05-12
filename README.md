@@ -19,13 +19,20 @@ The specifics of this solution is, that it deploys the website files in Terrafor
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [AWS CLI Configure](https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html) (or pass keys to Terraform as ENV variables)
 
+# Config (Cloud or env.tfvars)
+- aws_region 
+- custom_domain
+- ssh_private_key
+- ssh_public_key
+- workspace_iam_role
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+
 # Run locally
 - `terraform workspace select dev`
-- Fill in `dev.tfvars`
 - `terraform apply -var-file=dev.tfvars`
 
 # Run in Terraform Cloud
-- Add required variables
 - Run (or add VCS trigger to run automatically)
 
 # Improvements
