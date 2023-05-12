@@ -1,3 +1,7 @@
 workspace_iam_role = "arn:aws:iam::AWS_ACCOUNT_ID:role/Terraform"
-ssh_public_key = "ssh-rsa PUBLIC_KEY"
-ssh_private_key_path = "~/.ssh/id_rsa"
+ssh_public_key = "PUBLIC_KEY"
+ssh_private_key = <<EOF
+-----BEGIN OPENSSH PRIVATE KEY-----
+PRIVATE_KEY
+-----END OPENSSH PRIVATE KEY-----
+EOF

@@ -9,7 +9,7 @@ terraform {
   }
 
   cloud {
-    organization = "ORGANIZATION"
+    organization = "organization"
     workspaces {
       tags = ["app:website"]
     }
@@ -25,16 +25,16 @@ provider "aws" {
 }
 
 module "ec2_website" {
-  source               = "./modules/terraform-aws-ec2_website"
-  ssh_public_key       = var.ssh_public_key
-  ssh_private_key_path = var.ssh_private_key_path
+  source          = "./modules/terraform-aws-ec2_website"
+  ssh_public_key  = var.ssh_public_key
+  ssh_private_key = var.ssh_private_key
 }
 
 module "ec2_website_deploy" {
-  source               = "./modules/terraform-aws-ec2_website_deploy"
-  ssh_private_key_path = var.ssh_private_key_path
-  website_public_ip    = module.ec2_website.ec2_public_ip
-  website_root         = var.website_root
+  source            = "./modules/terraform-aws-ec2_website_deploy"
+  ssh_private_key   = var.ssh_private_key
+  website_public_ip = module.ec2_website.ec2_public_ip
+  website_root      = var.website_root
 }
 
 module "s3_website" {

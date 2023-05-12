@@ -68,7 +68,7 @@ resource "aws_instance" "ec2_website" {
     type        = "ssh"
     user        = "ec2-user"
     host        = aws_instance.ec2_website.public_ip
-    private_key = file(var.ssh_private_key_path)
+    private_key = var.ssh_private_key
   }
 
   provisioner "remote-exec" {
