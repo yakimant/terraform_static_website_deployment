@@ -1,14 +1,2 @@
 website_root                      = "website"
 aws_region                        = "eu-central-1"
-workspace_iam_roles = {
-  dev  = "arn:aws:iam::DEV_ACCOUNT_ID:role/Terraform"
-  prod = "arn:aws:iam::PROD_ACCOUNT_ID:role/Terraform"
-}
-ssh_public_keys = {
-  dev  = "ssh-rsa PUBLIC_KEY"
-  prod = "ssh-rsa PUBLIC_KEY"
-}
-ssh_private_key_paths = {
-  dev  = "~/.ssh/id_rsa"
-  prod = "~/.ssh/id_rsa"
-}

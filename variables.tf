@@ -4,16 +4,17 @@ variable "aws_region" {
 
 variable "website_root" {
   type = string
+  default = "website"
 }
 
-variable "workspace_iam_roles" {
-  type = map(string)
+variable "workspace_iam_role" {
+  type = string
 }
 
-variable "ssh_public_keys" {
-  type = map(string)
+variable "ssh_public_key" {
+  type = string
 }
 
-variable "ssh_private_key_paths" {
-  type = map(string)
+variable "ssh_private_key_path" {
+  type = string
 }
